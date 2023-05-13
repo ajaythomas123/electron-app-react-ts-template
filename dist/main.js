@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -16,7 +8,37 @@
   \*********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar path_1 = __importDefault(__webpack_require__(/*! path */ \"path\"));\nvar electron_1 = __webpack_require__(/*! electron */ \"electron\");\nvar createWindow = function () {\n    var win = new electron_1.BrowserWindow({\n        width: 800,\n        height: 600,\n        webPreferences: {\n            preload: path_1.default.join(__dirname, 'preload.js')\n        }\n    });\n    win.loadFile(path_1.default.join(__dirname, './index.html'));\n};\nelectron_1.app.whenReady().then(function () {\n    createWindow();\n    electron_1.app.on(\"activate\", function () {\n        if (electron_1.BrowserWindow.getAllWindows().length === 0) {\n            createWindow();\n        }\n    });\n});\nelectron_1.app.on(\"window-all-closed\", function () {\n    if (process.platform !== \"darwin\") {\n        electron_1.app.quit();\n    }\n});\n\n\n//# sourceURL=webpack://my-webpack-project/./src/main.ts?");
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var path_1 = __importDefault(__webpack_require__(/*! path */ "path"));
+var electron_1 = __webpack_require__(/*! electron */ "electron");
+var createWindow = function () {
+    var win = new electron_1.BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+            preload: path_1.default.join(__dirname, 'preload.js')
+        }
+    });
+    win.loadFile(path_1.default.join(__dirname, '../index.html'));
+};
+electron_1.app.whenReady().then(function () {
+    createWindow();
+    electron_1.app.on("activate", function () {
+        if (electron_1.BrowserWindow.getAllWindows().length === 0) {
+            createWindow();
+        }
+    });
+});
+electron_1.app.on("window-all-closed", function () {
+    if (process.platform !== "darwin") {
+        electron_1.app.quit();
+    }
+});
+
 
 /***/ }),
 
@@ -75,3 +97,4 @@ module.exports = require("path");
 /******/ 	
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

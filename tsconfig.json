@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "jsx": "react",
     "noImplicitAny": true,
     "esModuleInterop": true,
     "sourceMap": true,
