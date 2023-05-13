@@ -1,5 +1,6 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const BaseConfig = require("./webpack.base.config.js");
 
 module.exports = merge(BaseConfig, {
@@ -9,6 +10,9 @@ module.exports = merge(BaseConfig, {
   target: "electron-main",
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "[name]-[contenthash].js",
+    filename: "[name]-[hash].js",
   },
+  plugins: [
+    new WebpackManifestPlugin({ fileName: 'manifest.main.json' }),
+  ],
 });

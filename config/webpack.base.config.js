@@ -7,21 +7,22 @@ const isProduction = process.env.NODE_ENV == "production";
 const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
-  mode: isProduction ? 'production' : 'development',
-  devtool: 'source-map',
+  mode: isProduction ? "production" : "development",
+  devtool: "source-map",
   devServer: {
     open: true,
     host: "localhost",
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./index.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: "./index.html",
+    //   inject: "body",
+    // }),
 
-    new MiniCssExtractPlugin(),
+    // new MiniCssExtractPlugin(),
 
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    // // Add your plugins here
+    // // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
@@ -34,8 +35,8 @@ const config = {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.css$/i,

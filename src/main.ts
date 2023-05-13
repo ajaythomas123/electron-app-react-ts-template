@@ -1,16 +1,20 @@
-import path from 'path';
+import path from "path";
 import { app, BrowserWindow } from "electron";
+const fs = require("fs");
+const PRELOAD_MANIFEST = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "manifest.preload.json"))
+);
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-        preload: path.join(__dirname, 'preload.js')
-    }
+      preload: path.join(__dirname, PRELOAD_MANIFEST["preload.js"]),
+    },
   });
 
-  win.loadFile('./index.html');
+  win.loadFile("./index.html");
 };
 
 app.whenReady().then(() => {
