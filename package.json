@@ -7,7 +7,7 @@
     "build": "webpack --mode=development --node-env=development",
     "watch": "webpack --watch",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./dist/main.js",
+    "start": "npm run build && electron ./dist/main-*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",

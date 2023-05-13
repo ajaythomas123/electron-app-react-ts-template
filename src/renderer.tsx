@@ -10,7 +10,7 @@ const App = () => {
     }, 1000);
   });
 
-  return <h1 style={{ color: textColor }}>Hello world!</h1>;
+  return <h1 style={{ color: textColor }}>This text is {textColor}</h1>;
 };
 
 const root = createRoot(document.getElementById('root'));
