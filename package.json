@@ -1,0 +1,46 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --mode=development --node-env=development",
+    "watch": "webpack --watch",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron ./dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "serve": "webpack serve"
+  },
+  "keywords": [
+    "electron",
+    "demo",
+    "playground"
+  ],
+  "author": "Ajay Thomas <ajaythomas123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.4",
+    "css-loader": "^6.7.3",
+    "electron": "^24.3.0",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "prettier": "^2.8.8",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.40.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
