@@ -50,5 +50,9 @@
     "eslint": "^8.40.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajaythomas123/electron-app-react-ts-template.git"
   }
 }
