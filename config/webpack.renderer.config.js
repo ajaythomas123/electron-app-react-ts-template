@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { merge } = require("webpack-merge");
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const BaseConfig = require("./webpack.base.config.js");
 
 module.exports = merge(BaseConfig, {
@@ -24,6 +23,5 @@ module.exports = merge(BaseConfig, {
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-    new WebpackManifestPlugin({ fileName: 'manifest.renderer.json' }),
   ],
 });

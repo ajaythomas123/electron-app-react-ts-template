@@ -1,8 +1,8 @@
 import path from "path";
 import { app, BrowserWindow } from "electron";
 const fs = require("fs");
-const PRELOAD_MANIFEST = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "manifest.preload.json"))
+const MANIFEST = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "manifest.json"))
 );
 
 const createWindow = () => {
@@ -10,7 +10,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, PRELOAD_MANIFEST["preload.js"]),
+      preload: path.join(__dirname, MANIFEST["preload.js"]),
     },
   });
 

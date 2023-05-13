@@ -1,9 +1,9 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
-
+const manifestSeed = {};
 const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
@@ -14,12 +14,7 @@ const config = {
     host: "localhost",
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: "./index.html",
-    //   inject: "body",
-    // }),
-
-    // new MiniCssExtractPlugin(),
+    new WebpackManifestPlugin({ fileName: 'manifest.json', seed: manifestSeed }),
 
     // // Add your plugins here
     // // Learn more about plugins from https://webpack.js.org/configuration/plugins/
