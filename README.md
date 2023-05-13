@@ -1,15 +1,6 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Electron App React-TS Template (WIP)
 
-This project has been created using **webpack-cli**, you can now run
+This a template for starting a React-TypeScript electron project.
 
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+## TODO
+- Add testing configuration

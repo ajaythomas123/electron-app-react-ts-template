@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "electron-app-react-ts-template",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "A template for a React-TypeScript Electron App for future reference",
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode=development --node-env=development",
@@ -15,8 +15,9 @@
   },
   "keywords": [
     "electron",
-    "demo",
-    "playground"
+    "electron-template",
+    "react",
+    "typescript"
   ],
   "author": "Ajay Thomas <ajaythomas123@gmail.com>",
   "license": "MIT",
